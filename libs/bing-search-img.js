@@ -38,13 +38,12 @@ exports.request = function(query, callback, errback){
     }
     try{
       var results = data.SearchResponse.Image.Results;
-      if(typeof callback === 'function') callback(results);
-      return;
     }
     catch(e){
       if(typeof errback === 'function') errback(data.SearchResponse.Errors[0].Message);
       return;
     }
+    if(typeof callback === 'function') callback(results);
   });
 };
 
