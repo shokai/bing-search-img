@@ -1,8 +1,5 @@
 
-/*
- * GET home page.
- */
-
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' })
+  var app_root = (req.connection.encrypted ? 'https' : 'http') + '://' + req.headers['host'];
+  res.render('index', { title: 'Bing Search Image' })
 };
