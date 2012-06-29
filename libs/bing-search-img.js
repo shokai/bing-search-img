@@ -3,8 +3,8 @@ var request = require('request');
 
 exports.api_endpoint = 'http://api.bing.net/json.aspx?';
 
-exports.app_id = function(id){
-    exports.__app_id = id;
+exports.api_key = function(key){
+    exports.__api_key = key;
 };
 
 exports.base_query = {
@@ -22,7 +22,7 @@ exports.request = function(query, callback, errback){
     for(var k in exports.base_query){
         if(!query[k]) query[k] = exports.base_query[k];
     };
-    query.AppId = exports.__app_id;
+    query.AppId = exports.__api_key;
     var uri = exports.api_endpoint + qs.stringify(query);
     request(uri, function(err, res, body){
         if(err || res.statusCode != 200){
