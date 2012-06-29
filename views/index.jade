@@ -1,2 +1,13 @@
 h1= title
 p Welcome to #{title}
+div
+  h2 API
+  ul
+    li
+      p JSON
+      - url = app_root+'/search.json?word=橋本商会'
+      a(href = url)= url
+    li
+      p JSONP
+      - url = app_root+'/search.json?word=マンガ&callback=foo'
+      a(href = url)= url
