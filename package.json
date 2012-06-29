@@ -5,6 +5,7 @@
   "dependencies": {
     "express": "2.5.10",
     "jade": ">= 0.0.1",
-    "request": ">= 2.9.0"
+    "request": ">= 2.9.0",
+    "memory-cache": ">= 0.0.2"
   }
 }
