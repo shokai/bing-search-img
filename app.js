@@ -1,10 +1,9 @@
 
-/**
- * Module dependencies.
- */
-
 var express = require('express')
-  , routes = require('./routes');
+var routes = {
+  index: require('./routes'),
+  api: require('./routes/api')
+};
 
 var app = module.exports = express.createServer();
 
@@ -29,8 +28,9 @@ app.configure('production', function(){
 
 // Routes
 
-app.get('/', routes.index);
+app.get('/', routes.index.index);
+app.get('/search.json', routes.api.search)
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 5000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
