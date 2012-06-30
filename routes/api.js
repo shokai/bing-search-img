@@ -2,7 +2,6 @@ var cache = require('memory-cache');
 var bing = require(process.env.PWD+'/libs/bing-search-img.js');
 if(!process.env.BING_KEY){
   console.error('BING_KEY not exists');
-  process.exit(1);
 }
 bing.api_key(process.env.BING_KEY);
 
