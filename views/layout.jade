@@ -1,6 +1,12 @@
-!!!
+!!!XHTML
 html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+  body
+    div#contents
+      div#main!=body
+      hr
+      div#footer
+        - url = "https://github.com/shokai/bing-search-img"
+        a(href = url)= url

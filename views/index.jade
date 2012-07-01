@@ -4,9 +4,16 @@ div
   ul
     li
       p JSON
-      - url = app_root+'/search.json?word=橋本商会'
+      - url = app_root+"/search.json?word=橋本商会"
       a(href = url)= url
     li
       p JSONP
-      - url = app_root+'/search.json?word=マンガ&callback=foo'
+      - url = app_root+"/search.json?word=マンガ&callback=foo"
       a(href = url)= url
+div#sample
+  h2 Try
+  input(name="word", size=50, value="山", type="text")
+  input(name="search", value="search", type="button")
+  ul.result
+script(src="/javascripts/jquery.js", type="application/javascript")
+script(src="/javascripts/index.js", type="application/javascript")
