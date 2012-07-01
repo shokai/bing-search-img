@@ -1,5 +1,6 @@
 var qs = require('querystring');
 var request = require('request');
+var _ = require('underscore');
 
 exports.api_endpoint = 'http://api.bing.net/json.aspx?';
 
@@ -37,7 +38,14 @@ exports.request = function(query, callback, errback){
       return;
     }
     try{
-      var results = data.SearchResponse.Image.Results;
+      var results = _.map(data.SearchResponse.Image.Results, function(img){
+        return {
+          url: img.MediaUrl,
+          link: img.Url,
+          text: img.Title,
+          thumb: img.Thumbnail.Url
+        };
+      });
     }
     catch(e){
       if(typeof errback === 'function') errback(data.SearchResponse.Errors[0].Message);

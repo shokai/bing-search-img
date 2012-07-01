@@ -9,8 +9,8 @@ $(function(){
       for(var i = 0; i < res.length; i++){
         var img = res[i];
         result.append($('<li>').append(
-          $('<a>').attr('href', img.Url).append(
-            $('<img>').attr('src', img.Thumbnail.Url).attr('alt', img.Title).attr('title', img.Title)
+          $('<a>').attr('href', img.link).append(
+            $('<img>').attr('src', img.thumb).attr('alt', img.text).attr('title', img.text)
           )
         ));
       }
