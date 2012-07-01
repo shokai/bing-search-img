@@ -1,6 +1,6 @@
 {
-  "name": "bing-search-img",
-  "version": "0.0.1",
+  "name": "image-search-api-jp",
+  "version": "0.0.2",
   "private": true,
   "dependencies": {
     "express": "2.5.10",
