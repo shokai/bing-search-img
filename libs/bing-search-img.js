@@ -14,7 +14,7 @@ exports.base_query = {
   Sources: 'Image',
   'Image.Count': 50,
   'image.Offset': 0,
-  'Adult': 'off',
+  // 'Adult': 'off',
   Query: 'book',
 };
 
