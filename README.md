@@ -1,7 +1,7 @@
 Bing Search Image
 =================
 
-- http://bing-search-img.herokuapp.com
+- http://img-search-jp.herokuapp.com
 - https://github.com/shokai/bing-search-img
 
 Install Dependencies
