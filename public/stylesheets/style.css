@@ -1,8 +1,35 @@
+h1, h2, h3, h4 {
+  color: #b4c864;
+}
+
 body {
+  background-color: #281414;
+  color: #c8c8c8;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+div#contents {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body div {
+  margin: 10px;
+  font-size: 95%;
 }
 
 a {
-  color: #00B7FF;
+  color: #a08cff;
+}
+
+input {
+  font-size: 100%;
+}
+
+#sample ul.result li {
+  float: left;
+  margin: 4px;
+}
+
+#sample {
+  clear: left;
 }
