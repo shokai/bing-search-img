@@ -7,7 +7,7 @@ if(!process.env.BING_KEY){
 bing.api_key(process.env.BING_KEY);
 
 exports.search = function(req, res){
-  var word = req.query.word || 'book';
+  var word = req.query.q || 'book';
 
   var send_response = function(results){
     res.contentType('application/json');

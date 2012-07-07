@@ -5,15 +5,15 @@ div
   ul
     li
       p JSON
-      - url = app_root+"/search.json?word=橋本商会"
+      - url = app_root+"/search.json?q=橋本商会"
       a(href = url)= url
     li
       p JSONP
-      - url = app_root+"/search.json?word=マンガ&callback=foo"
+      - url = app_root+"/search.json?q=マンガ&callback=foo"
       a(href = url)= url
 div#sample
   h2 Try
-  input(name="word", size=30, value="山", type="text")
+  input(name="q", size=30, value="山", type="text")
   input(name="search", value="search", type="button")
   div#status
   ul.result

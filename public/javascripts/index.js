@@ -2,7 +2,7 @@ $(function(){
   $('#sample input[name=search]').click(function(e){
     search();
   });
-  $('#sample input[name=word]').keydown(function(e){
+  $('#sample input[name=q]').keydown(function(e){
     if(e.keyCode === 13) search();
   });
 });
@@ -18,10 +18,10 @@ var search_status = new function(){
 }();
 
 var search = function(word){
-  if(!word) word = $('#sample input[name=word]').val();
+  if(!word) word = $('#sample input[name=q]').val();
   if(word.length < 1) return;
   search_status.show('search ...');
-  $.getJSON('/search.json?word='+word+'&callback=?', function(res){
+  $.getJSON('/search.json?q='+word+'&callback=?', function(res){
     var result = $('#sample ul.result');
     search_status.hide();
     result.html('');
